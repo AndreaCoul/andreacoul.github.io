@@ -1,0 +1,39 @@
+/*my first css */
+
+/* color.adobe.com have great color pallets*/
+/* mdn and css tricks are good resources */
+
+body {
+    font-family: Arial, Helvetica, sans-serif; 
+    background-color: white;
+}
+
+img {
+    
+
+}
+
+h1 {
+    font-family: 'Mountains of Christmas', cursive;
+    display: block;
+    color: red;
+    text-align: center;
+    font-size: 500%;  
+}
+
+section{
+    border-top: 2px solid green;
+    border-bottom: 2px solid green;
+    display: flex;
+   flex-flow: column nowrap;
+   padding-top: 1rem;
+}
+
+
+
+    img:hover{
+        animation: forwards;
+        
+        
+    }
+   
