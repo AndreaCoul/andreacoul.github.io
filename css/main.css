@@ -3,14 +3,50 @@
 /* color.adobe.com have great color pallets*/
 /* mdn and css tricks are good resources */
 
+
+/* section{
+    border-top: 2px solid green;
+    border-bottom: 2px solid green;
+    display: flex;
+   flex-flow: column nowrap;
+   padding-top: 1rem;
+} 
 body {
-    font-family: Arial, Helvetica, sans-serif; 
-    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: black;
+  } */
+  
+  *,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-img {
-    
+/* body 
 
+min-height: 100vh;
+  padding: 40px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  */
+body {
+  
+
+  background:white;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: green; 
+  
 }
 
 h1 {
@@ -18,22 +54,75 @@ h1 {
     display: block;
     color: red;
     text-align: center;
-    font-size: 500%;  
+    font-size: 500%; 
+    
+}
+/* .flip-card-container */
+.flip-card-container {
+    width: 700px;
+    height: 500px;
+    margin: 40px;
+    perspective: 1000px;
 }
 
-section{
-    border-top: 2px solid green;
-    border-bottom: 2px solid green;
-    display: flex;
-   flex-flow: column nowrap;
-   padding-top: 1rem;
+/* .flip-card */
+.flip-card {
+  width: inherit;
+  height: inherit;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: .5s;
 }
 
+/* hover and focus-within states */
 
+.flip-card-container:hover .flip-card 
+/* , .flip-card-container:focus-within .flip-card */{
+  transform: rotateY(180deg);
+}
 
-    img:hover{
-        animation: forwards;
-        
-        
-    }
-   
+/* .card-... */
+.card-front,
+.card-back {
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+/* .card-front */
+.card-front {
+  transform: rotateY(0deg);
+ }
+
+/* .card-back */
+.card-back {
+  transform: rotateY(180deg);
+  }
+
+/* figure 
+figure {
+  z-index: -1;
+}*/
+
+/* figure, .img-bg 
+figure,
+.img-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+}*/
+figure {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+/* img */
+img {
+  height: 100%;
+  border-radius: 24px;
+}
