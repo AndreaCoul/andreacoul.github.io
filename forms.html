@@ -2,20 +2,53 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Alien Abduction Order Form</title>
+	<title>Visitor Form</title>
 	
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet"> 
-
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<link href="css/forms.css" rel="stylesheet">
 
 </head>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom nav-link" style="background-color: #364C59;">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Andrea's Awesome site |</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="food.html">Food</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="travel.html">Travel</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="links.html">Helpful Links</a>
+            </li>
+			<li class="nav-item">
+				<a class="nav-link active" aria-current="page" href="forms.html">Contact Me</a>
+			  </li>
+          </ul>
+        </div>
+      </div>
+    </nav> 
+        </header>
+		<br>
 <body>
 	<div class="wrapper">
 		<section>
-			<h1>Alien Abduction Order Form</h1>
-			<p>Fill out the form below to place an order for an alien abduction by one of our fine UFOs.</p>
+			<h1>Visitor Sign-in Form</h1>
+			<p>Fill out the form below to let me know you visited my site. Who knows, I may reach out, as well.</p>
 		<form action="https://e3vwdl4bpd.execute-api.us-west-2.amazonaws.com/default/API2SES" method="POST">
 			<input type="hidden" id="myhidden" name="send_to" value="andrea.coulthart@target.com">
 			<fieldset>	<!-- puts a box around the fields-->
@@ -28,60 +61,60 @@
 					<input type="email" id="email" name="email">
 			</fieldset>	
 			<fieldset>
-			<legend>About your abduction </legend>
+			<legend>About my site </legend>
 				<label for="date">Requested  date: </label>
 					<input type="date" id="date" name="date">
-				<label for="qty">How many people would you like abducted?</label>
-					<input type="number" id="qty" name="qty" min="1" max="10">
-				<p>What type of UFO do you prefer?</p>
+				<label for="qty">How many times have you visited my site?</label>
+					<input type="number" id="qty" name="qty" min="1" max="20">
+				<p>What was you purpose for visiting?</p>
 				<label> <!-- type and name have to be the same for radio buttons-->
-					<input type="radio" name="ufotype" value="Classic" checked>Classic oval UFO
+					<input type="radio" name="ufotype" value="Classic" checked>No particular reason - Just checking window browsing
 				</label>
 				<label>
-					<input type="radio" name="ufotype" value="starwars">Star Wars-style Imperial cruiser
+					<input type="radio" name="ufotype" value="starwars">Checking out a new Recipe
 				</label>
 				<label>
-					<input type="radio" name="ufotype" value="battlestar">Battlestar Galactica-style Viper
+					<input type="radio" name="ufotype" value="battlestar">Learing more about you and your background
 				</label>	
 				<label>
-					<input type="radio" name="ufotype" value="borgstyle">Borg-style cube
+					<input type="radio" name="ufotype" value="borgstyle">Travel interests
 				</label>		
 						
-				<label for="abtype"> What type of abduction experience do you want?</label>
+				<label for="abtype"> What was your favorite part of the site?</label>
 					<select id="abtype" name="abtype"> 
 						<!-- for and id have to be the same-->
 						<!-- name is for backend processing-->
 						<option selected> Select one.... </option>
-						<option value="toursolar"> Tour of the solar system </option>
-						<option value="aliendinner"> Alien dinner and discussion </option>
-						<option value="aliendance"> Alien dance lessons </option>
-						<option value="whalewatch"> Whale watching </option>
+						<option value="toursolar"> All was good </option>
+						<option value="aliendinner"> About you </option>
+						<option value="aliendance"> Food  </option>
+						<option value="whalewatch"> Travel </option>
 					</select>	
 				
 				
-				<label for="comments">Special requests:</label>
-				<textarea id="comments" name="comments" placeholder="tell me everything..."></textarea>
+				<label for="comments">Comments:</label>
+				<textarea id="comments" name="comments" placeholder="insert comments here...."></textarea>
 				<label>
 				    <input type="checkbox" value="subscribe" name="subscribe" checked> Add me to your email list!
 				</label>
 			</fieldset>
-			<button type="submit">Place Order</button>
+			<button type="submit">Submit</button>
 			<!-- no id needed b/c no label-->
 			<!-- no name or value b/c not trying to process anything on the server-->
 			</form>					
 		</section>
 		<aside>
-			<h3>Our Location</h3>
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d705.579903711395!2d-93.27136817260791!3d44.977817979098184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b3329a733800b1%3A0x2e151ae0d4a5e091!2s60%20South%206th%20St%20%233625%2C%20Minneapolis%2C%20MN%2055402!5e0!3m2!1sen!2sus!4v1638993511617!5m2!1sen!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+			<h3>My Location</h3>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11289.230947401795!2d-93.2722821!3d44.9780593!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x37b48e02003ff33b!2sCity%20Center!5e0!3m2!1sen!2sus!4v1639187894040!5m2!1sen!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 			<address>
-				Frontend Masters &middot;
-				60 South 6th Street &middot;
-				Suite 3625 &middot;
-				Minneapolis, MN 55402
+				Target Corp &middot;
+				33 South 6th St. &middot;
+				Minneapolis, MN &middot;
 			</address>
 		</aside>
 	</div>
 	<script src="js/forms.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
 
