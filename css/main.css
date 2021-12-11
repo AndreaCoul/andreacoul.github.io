@@ -78,8 +78,9 @@ section{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: auto;
+  margin: 0 6rem;
   background-color: #8C8070;  
+  border-radius: 20px;
 }
 
 .container{
@@ -123,6 +124,7 @@ img{
  width: 350px;
  height: 200px; 
  margin: 10px;
+ border-radius: 20px;
  transition: all 1s;
 }
 
